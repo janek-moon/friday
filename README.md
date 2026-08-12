@@ -1,4 +1,4 @@
-# f.r.i.d.a.y
+# friday
 
 English | [한국어](README.ko.md)
 
@@ -32,7 +32,7 @@ its state after context loss.
 ## Why a stance, not a survey
 
 An agent's cheapest output is agreeable analysis: three balanced paragraphs
-that commit to nothing. f.r.i.d.a.y forbids it. A verdict must take a side,
+that commit to nothing. friday forbids it. A verdict must take a side,
 and its grounds must be evidence gathered in this run — file paths, command
 output, measurements — never model prior knowledge alone. "We tried that"
 needs a citation too, which is why refuted ideas stay on the board with the
@@ -41,20 +41,20 @@ evidence that killed them.
 ## Install
 
 ```
-/plugin marketplace add janek-moon/f.r.i.d.a.y
-/plugin install f.r.i.d.a.y@f.r.i.d.a.y
+/plugin marketplace add janek-moon/friday
+/plugin install friday@friday
 ```
 
 Codex reads the same skill from `~/.codex/skills/friday` — `install.sh`
 links it from a checkout, or fetches it when piped through curl:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/janek-moon/f.r.i.d.a.y/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/janek-moon/friday/main/install.sh | sh
 ```
 
 ## Use
 
-The skill (`skills/friday/SKILL.md`, invoked as `/f.r.i.d.a.y:friday`)
+The skill (`skills/friday/SKILL.md`, invoked as `/friday:friday`)
 switches the mode on for the session; from then on, just throw ideas. The
 plugin never creates or edits repo docs (`AGENTS.md`, `CLAUDE.md`,
 `.claude/rules/`) — it writes the board and nothing else.

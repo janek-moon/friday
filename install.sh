@@ -1,15 +1,15 @@
 #!/bin/sh
-# Install f.r.i.d.a.y for Codex: link the skill from a checkout, or fetch
+# Install friday for Codex: link the skill from a checkout, or fetch
 # SKILL.md from GitHub when piped through curl. Claude Code users don't need
 # this - the plugin ships the skill by itself.
 #
 # Usage:
 #   ./install.sh                                  # from a checkout
-#   curl -fsSL https://raw.githubusercontent.com/janek-moon/f.r.i.d.a.y/main/install.sh | sh
+#   curl -fsSL https://raw.githubusercontent.com/janek-moon/friday/main/install.sh | sh
 
 set -eu
 
-RAW_URL="https://raw.githubusercontent.com/janek-moon/f.r.i.d.a.y/main"
+RAW_URL="https://raw.githubusercontent.com/janek-moon/friday/main"
 DEST="$HOME/.codex/skills/friday"
 
 # Codex discovers skills from ~/.codex/skills/<name>/SKILL.md - the same
@@ -28,4 +28,4 @@ else
 fi
 
 echo
-echo "Done. In Claude Code: /f.r.i.d.a.y:friday. In Codex: the friday skill."
+echo "Done. In Claude Code: /friday:friday. In Codex: the friday skill."

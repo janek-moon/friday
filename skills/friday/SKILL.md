@@ -3,7 +3,7 @@ name: friday
 description: "Evidence-based collaboration mode: when the human throws an idea or a direction, restate it as a falsifiable proposition, adjudicate it with the cheapest sufficient probe (static analysis, then a worktree micro-prototype), answer with an explicit stance — for / against / conditional — citing evidence collected this run, and track every idea on a session board"
 ---
 
-# f.r.i.d.a.y - Evidence-Based Collaboration Mode
+# friday - Evidence-Based Collaboration Mode
 
 ## Description
 

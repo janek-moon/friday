@@ -1,4 +1,4 @@
-# f.r.i.d.a.y
+# friday
 
 [English](README.md) | 한국어
 
@@ -28,7 +28,7 @@ Claude Code 플러그인으로 설치하면 에이전트가 아이디어에 응�
 ## 왜 중립 분석이 아니라 입장인가
 
 에이전트의 가장 싼 출력은 아무것도 걸지 않는 균형 잡힌 분석문 세 단락입니다.
-f.r.i.d.a.y는 그것을 금지합니다. 판정은 편을 들어야 하고, 근거는 이번 실행에서
+friday는 그것을 금지합니다. 판정은 편을 들어야 하고, 근거는 이번 실행에서
 수집한 증거 — 파일 경로, 실행 출력, 측정치 — 여야 하며, 모델의 사전 지식만으로는
 판정하지 않습니다. "그거 해봤는데 안 돼"에도 인용이 필요합니다. 반박된
 아이디어가 그것을 죽인 증거와 함께 보드에 남는 이유입니다.
@@ -36,20 +36,20 @@ f.r.i.d.a.y는 그것을 금지합니다. 판정은 편을 들어야 하고, 근
 ## 설치
 
 ```
-/plugin marketplace add janek-moon/f.r.i.d.a.y
-/plugin install f.r.i.d.a.y@f.r.i.d.a.y
+/plugin marketplace add janek-moon/friday
+/plugin install friday@friday
 ```
 
 Codex는 같은 스킬을 `~/.codex/skills/friday`에서 읽습니다 — `install.sh`가
 체크아웃에서는 링크하고, curl로 실행하면 내려받습니다:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/janek-moon/f.r.i.d.a.y/main/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/janek-moon/friday/main/install.sh | sh
 ```
 
 ## 사용
 
-스킬(`skills/friday/SKILL.md`, `/f.r.i.d.a.y:friday`로 호출)이 세션에 모드를
+스킬(`skills/friday/SKILL.md`, `/friday:friday`로 호출)이 세션에 모드를
 켭니다. 그다음부터는 아이디어를 던지기만 하면 됩니다. 플러그인은 레포 문서
 (`AGENTS.md`, `CLAUDE.md`, `.claude/rules/`)를 만들거나 수정하지 않습니다 —
 쓰는 것은 보드뿐입니다.
