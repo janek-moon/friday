@@ -59,6 +59,13 @@ the hand-off.
 /plugin install f.r.i.d.a.y@f.r.i.d.a.y
 ```
 
+Codex reads the same skill from `~/.codex/skills/friday` — `install.sh`
+links it from a checkout, or fetches it when piped through curl:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/janek-moon/f.r.i.d.a.y/main/install.sh | sh
+```
+
 ## Use
 
 The skill (`skills/friday/SKILL.md`, invoked as `/f.r.i.d.a.y:friday`)

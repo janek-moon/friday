@@ -54,6 +54,13 @@ f.r.i.d.a.y는 3층 스택의 협업 층이며, 단독으로도 쓸 수 있습�
 /plugin install f.r.i.d.a.y@f.r.i.d.a.y
 ```
 
+Codex는 같은 스킬을 `~/.codex/skills/friday`에서 읽습니다 — `install.sh`가
+체크아웃에서는 링크하고, curl로 실행하면 내려받습니다:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/janek-moon/f.r.i.d.a.y/main/install.sh | sh
+```
+
 ## 사용
 
 스킬(`skills/friday/SKILL.md`, `/f.r.i.d.a.y:friday`로 호출)이 세션에 모드를
