@@ -2,8 +2,6 @@
 
 English | [한국어](README.ko.md)
 
-![friday — evidence-based collaboration mode](assets/banner.png)
-
 An evidence-based collaboration mode for coding agents, named after Iron
 Man's FRIDAY. Installed as a Claude Code plugin, it changes how the agent
 answers ideas: every idea the human throws is restated as a falsifiable
@@ -47,12 +45,8 @@ evidence that killed them.
 /plugin install friday@friday
 ```
 
-Codex reads the same skill from `~/.codex/skills/friday` — `install.sh`
-links it from a checkout, or fetches it when piped through curl:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/janek-moon/friday/main/install.sh | sh
-```
+Codex reads the same skill from `~/.codex/skills/friday`, linked from a
+checkout by `./install.sh`.
 
 ## Use
 

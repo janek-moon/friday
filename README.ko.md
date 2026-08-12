@@ -2,8 +2,6 @@
 
 [English](README.md) | 한국어
 
-![friday — 증거 기반 협업 모드](assets/banner.png)
-
 아이언맨의 FRIDAY에서 이름을 딴, 코딩 에이전트를 위한 증거 기반 협업 모드입니다.
 Claude Code 플러그인으로 설치하면 에이전트가 아이디어에 응답하는 방식이 바뀝니다:
 사람이 던진 모든 아이디어를 반증 가능한 명제로 재진술하고, 가장 싼 프로브부터
@@ -42,12 +40,8 @@ friday는 그것을 금지합니다. 판정은 편을 들어야 하고, 근거�
 /plugin install friday@friday
 ```
 
-Codex는 같은 스킬을 `~/.codex/skills/friday`에서 읽습니다 — `install.sh`가
-체크아웃에서는 링크하고, curl로 실행하면 내려받습니다:
-
-```bash
-curl -fsSL https://raw.githubusercontent.com/janek-moon/friday/main/install.sh | sh
-```
+Codex는 같은 스킬을 `~/.codex/skills/friday`에서 읽습니다 — 체크아웃에서
+`./install.sh`가 링크합니다.
 
 ## 사용
 
