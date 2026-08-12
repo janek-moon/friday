@@ -3,7 +3,7 @@ name: friday
 description: "Evidence-based collaboration mode: when the human throws an idea or a direction, restate it as a falsifiable proposition, adjudicate it with the cheapest sufficient probe (static analysis, then a worktree micro-prototype), answer with an explicit stance — for / against / conditional — citing evidence collected this run, and track every idea on a session board"
 ---
 
-# f.r.i.d.a.y - Evidence-Based Collaboration Mode
+# friday - Evidence-Based Collaboration Mode
 
 ## Description
 
@@ -27,8 +27,7 @@ human: idea or direction
 [prototype]    surviving idea + the human's nod → a real artifact that
                produces measured numbers
 [implement]    small changes: implement directly and report. large changes:
-               hand to forge if present, carrying the evidence into its
-               Understand phase
+               present the evidence and the plan; the human routes it
 ```
 
 ### Formalize
@@ -68,10 +67,8 @@ is just more code.
 
 ### Implement
 
-Small changes: implement directly, report in one line. Large changes: if a
-forge-style staged-development skill is installed, invoke it and carry the
-evidence into its Understand phase; otherwise present the evidence and the
-plan and let the human route it.
+Small changes: implement directly, report in one line. Large changes:
+present the evidence and the plan, and let the human route it.
 
 ## Background parallelism
 
@@ -99,13 +96,6 @@ States: `probing` / `refuted` / `supported` / `prototyped` / `implementing`
 - Keep dead ideas and why they died — "we tried that" needs a citation too.
 - In a long session the board is the recovery point: after any context
   truncation, re-read it before answering.
-
-## murex integration (optional)
-
-Detect with `command -v murex`. When adjudication turns up several entangled
-unknowns — more than one proposition, each with real probability × impact —
-propose registering them as murex risks instead of probing them serially.
-Without murex, behave identically and simply skip the register.
 
 ## Boundaries
 

@@ -1,4 +1,4 @@
-# f.r.i.d.a.y
+# friday
 
 English | [한국어](README.ko.md)
 
@@ -19,8 +19,8 @@ you: idea or direction
                micro-prototype. verdict: FOR / AGAINST / CONDITIONAL,
                evidence cited
 [prototype]    survivors + your nod → an artifact with measured numbers
-[implement]    small changes done directly; large ones handed to a staged
-               pipeline with the evidence attached
+[implement]    small changes done directly; large ones reported with the
+               evidence and a plan
 ```
 
 The mode stays on for the whole session, several ideas can sit in different
@@ -32,36 +32,29 @@ its state after context loss.
 ## Why a stance, not a survey
 
 An agent's cheapest output is agreeable analysis: three balanced paragraphs
-that commit to nothing. f.r.i.d.a.y forbids it. A verdict must take a side,
+that commit to nothing. friday forbids it. A verdict must take a side,
 and its grounds must be evidence gathered in this run — file paths, command
 output, measurements — never model prior knowledge alone. "We tried that"
 needs a citation too, which is why refuted ideas stay on the board with the
 evidence that killed them.
 
-## Layering
-
-f.r.i.d.a.y is the collaboration layer of a three-layer stack, usable alone:
-
-| layer | role |
-|---|---|
-| `f.r.i.d.a.y` | collaboration — how ideas are exchanged: thrown, then judged by evidence |
-| [`murex`](https://github.com/janek-moon/murex) | method — risks decide what gets built first and whether to continue |
-| `forge` | integration — stage-gated implementation, carrying both to a PR |
-
-Both neighbours are soft dependencies, detected at run time (murex via
-`command -v murex`). Absent, f.r.i.d.a.y behaves identically and skips only
-the hand-off.
-
 ## Install
 
 ```
-/plugin marketplace add janek-moon/f.r.i.d.a.y
-/plugin install f.r.i.d.a.y@f.r.i.d.a.y
+/plugin marketplace add janek-moon/friday
+/plugin install friday@friday
+```
+
+Codex reads the same skill from `~/.codex/skills/friday` — `install.sh`
+links it from a checkout, or fetches it when piped through curl:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/janek-moon/friday/main/install.sh | sh
 ```
 
 ## Use
 
-The skill (`skills/friday/SKILL.md`, invoked as `/f.r.i.d.a.y:friday`)
+The skill (`skills/friday/SKILL.md`, invoked as `/friday:friday`)
 switches the mode on for the session; from then on, just throw ideas. The
 plugin never creates or edits repo docs (`AGENTS.md`, `CLAUDE.md`,
 `.claude/rules/`) — it writes the board and nothing else.

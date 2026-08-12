@@ -1,4 +1,4 @@
-# f.r.i.d.a.y
+# friday
 
 [English](README.md) | 한국어
 
@@ -17,8 +17,7 @@ Claude Code 플러그인으로 설치하면 에이전트가 아이디어에 응�
 [판정]        가장 싼 프로브부터: 정적 분석 → worktree 마이크로
               프로토타입. 산출: 찬성 / 반박 / 조건부, 증거 인용
 [프로토타입]   살아남은 아이디어 + 사용자 끄덕임 → 측정 수치가 나오는 실물
-[구현]        작은 변경은 직접 구현, 큰 변경은 증거를 붙여 단계형
-              파이프라인에 승계
+[구현]        작은 변경은 직접 구현, 큰 변경은 증거와 계획을 붙여 보고
 ```
 
 모드는 세션 내내 유지되고, 여러 아이디어가 동시에 다른 단계에 있을 수 있으며,
@@ -29,34 +28,28 @@ Claude Code 플러그인으로 설치하면 에이전트가 아이디어에 응�
 ## 왜 중립 분석이 아니라 입장인가
 
 에이전트의 가장 싼 출력은 아무것도 걸지 않는 균형 잡힌 분석문 세 단락입니다.
-f.r.i.d.a.y는 그것을 금지합니다. 판정은 편을 들어야 하고, 근거는 이번 실행에서
+friday는 그것을 금지합니다. 판정은 편을 들어야 하고, 근거는 이번 실행에서
 수집한 증거 — 파일 경로, 실행 출력, 측정치 — 여야 하며, 모델의 사전 지식만으로는
 판정하지 않습니다. "그거 해봤는데 안 돼"에도 인용이 필요합니다. 반박된
 아이디어가 그것을 죽인 증거와 함께 보드에 남는 이유입니다.
 
-## 층 구조
-
-f.r.i.d.a.y는 3층 스택의 협업 층이며, 단독으로도 쓸 수 있습니다:
-
-| 층 | 역할 |
-|---|---|
-| `f.r.i.d.a.y` | 협업 — 아이디어를 던지면 증거로 판정받는, 주고받기의 방식 |
-| [`murex`](https://github.com/janek-moon/murex) | 방법 — 무엇을 먼저 만들고 계속할지를 리스크가 결정 |
-| `forge` | 통합 — 둘을 품고 PR까지 가는 스테이지 게이트 구현 |
-
-이웃 두 층은 모두 소프트 의존입니다. 실행 시 탐지하며(murex는
-`command -v murex`), 없으면 동일하게 행동하되 연계만 생략합니다.
-
 ## 설치
 
 ```
-/plugin marketplace add janek-moon/f.r.i.d.a.y
-/plugin install f.r.i.d.a.y@f.r.i.d.a.y
+/plugin marketplace add janek-moon/friday
+/plugin install friday@friday
+```
+
+Codex는 같은 스킬을 `~/.codex/skills/friday`에서 읽습니다 — `install.sh`가
+체크아웃에서는 링크하고, curl로 실행하면 내려받습니다:
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/janek-moon/friday/main/install.sh | sh
 ```
 
 ## 사용
 
-스킬(`skills/friday/SKILL.md`, `/f.r.i.d.a.y:friday`로 호출)이 세션에 모드를
+스킬(`skills/friday/SKILL.md`, `/friday:friday`로 호출)이 세션에 모드를
 켭니다. 그다음부터는 아이디어를 던지기만 하면 됩니다. 플러그인은 레포 문서
 (`AGENTS.md`, `CLAUDE.md`, `.claude/rules/`)를 만들거나 수정하지 않습니다 —
 쓰는 것은 보드뿐입니다.
