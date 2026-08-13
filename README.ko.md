@@ -42,12 +42,12 @@ friday는 그것을 금지합니다. 판정은 편을 들어야 하고, 근거�
 /plugin install friday@friday
 ```
 
-Codex는 같은 스킬을 `~/.codex/skills/verdict`에서 읽습니다 — 체크아웃에서
+Codex는 같은 스킬을 `~/.codex/skills/workshop`에서 읽습니다 — 체크아웃에서
 `./install.sh`가 링크합니다.
 
 ## 사용
 
-스킬(`skills/verdict/SKILL.md`, `/friday:verdict`로 호출)이 세션에 모드를
+스킬(`skills/workshop/SKILL.md`, `/friday:workshop`로 호출)이 세션에 모드를
 켭니다. 그다음부터는 아이디어를 던지기만 하면 됩니다. 플러그인은 레포 문서
 (`AGENTS.md`, `CLAUDE.md`, `.claude/rules/`)를 만들거나 수정하지 않습니다 —
 쓰는 것은 보드뿐입니다.

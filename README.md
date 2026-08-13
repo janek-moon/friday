@@ -47,12 +47,12 @@ evidence that killed them.
 /plugin install friday@friday
 ```
 
-Codex reads the same skill from `~/.codex/skills/verdict`, linked from a
+Codex reads the same skill from `~/.codex/skills/workshop`, linked from a
 checkout by `./install.sh`.
 
 ## Use
 
-The skill (`skills/verdict/SKILL.md`, invoked as `/friday:verdict`)
+The skill (`skills/workshop/SKILL.md`, invoked as `/friday:workshop`)
 switches the mode on for the session; from then on, just throw ideas. The
 plugin never creates or edits repo docs (`AGENTS.md`, `CLAUDE.md`,
 `.claude/rules/`) — it writes the board and nothing else.
